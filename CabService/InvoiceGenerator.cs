@@ -18,12 +18,10 @@ namespace CabService
         /// </summary>
         /// <param name="travelDistance"></param>
         /// <param name="travelTime"></param>
-        public InvoiceGenerator(double travelDistance, double travelTime)
+        public InvoiceGenerator()
         {
-            this.distance = travelDistance;
-            this.time = travelTime;
         }
-        public double CalculateCabFare()
+        public double FareCalculate(double distance, double time)
         {
             double totalFareOfRide = (distance * perKiloMeterCost) + (time * perMinuteCost);
             if (totalFareOfRide < minimumFare)
@@ -31,6 +29,19 @@ namespace CabService
                 return minimumFare;
             }
             return totalFareOfRide;
+        }
+        public double FareCalculate(MultipleRides[] rides)
+        {
+            double totalFare = 0;
+            foreach (MultipleRides storeRide in rides)
+            {
+                totalFare += this.FareCalculate(storeRide.distance, storeRide.time);
+            }
+            if (totalFare < minimumFare)
+            {
+                return minimumFare;
+            }
+            return totalFare;
         }
     }
 }
