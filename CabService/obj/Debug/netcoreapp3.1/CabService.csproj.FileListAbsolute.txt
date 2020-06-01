@@ -1,5 +1,4 @@
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csprojAssemblyReference.cache
-C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.AssemblyInfoInputs.cache
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.AssemblyInfo.cs
 C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.exe
@@ -11,3 +10,12 @@ C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabServi
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.dll
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.pdb
 C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.genruntimeconfig.cache
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\nunit.framework.dll
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csproj.CopyComplete
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csproj.CoreCompileInputs.cache
