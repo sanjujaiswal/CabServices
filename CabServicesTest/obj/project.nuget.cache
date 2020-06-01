@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iszSKPl93ra+7Q5LxlS/YM+HE/iEewcWenVXsXx5bPtf71ppCdQLdEfr5rFP/LWADYrh0WeU/rFk6/Oz56z5PQ==",
+  "dgSpecHash": "z9u/WImRkQegvaXPD0BxC68WJtwZLVACxH9+OsbfGsyzkEOAB2RxILm/wDUI0scXwH9FG9CdfzLvcFti+BXDyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\source\\repos\\CabServices\\CabServicesTest\\CabServicesTest.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,14 @@
     "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\nunit3testadapter\\3.15.1\\nunit3testadapter.3.15.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.console\\3.11.1\\nunit.console.3.11.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.consolerunner\\3.11.1\\nunit.consolerunner.3.11.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.extension.nunitprojectloader\\3.6.0\\nunit.extension.nunitprojectloader.3.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.extension.nunitv2driver\\3.8.0\\nunit.extension.nunitv2driver.3.8.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.extension.nunitv2resultwriter\\3.6.0\\nunit.extension.nunitv2resultwriter.3.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.extension.teamcityeventlistener\\1.0.7\\nunit.extension.teamcityeventlistener.1.0.7.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit.extension.vsprojectloader\\3.8.0\\nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

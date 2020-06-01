@@ -1,3 +1,4 @@
+using CabService;
 using NUnit.Framework;
 
 namespace CabServicesTest
@@ -8,11 +9,13 @@ namespace CabServicesTest
         public void Setup()
         {
         }
-
         [Test]
-        public void Test1()
+        public void TakeDistanceAndTimeReturnTotalFare()
         {
-            Assert.Pass();
+            double travelDistance = 10.0;
+            double travelTime = 5;
+            InvoiceGenerator invoiceGen = new InvoiceGenerator(travelDistance, travelTime);
+            Assert.AreEqual(105, invoiceGen.CalculateCabFare());
         }
     }
 }
