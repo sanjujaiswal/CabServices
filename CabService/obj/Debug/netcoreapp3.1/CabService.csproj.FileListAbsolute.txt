@@ -1,0 +1,13 @@
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.AssemblyInfo.cs
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.exe
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.deps.json
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.runtimeconfig.json
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.runtimeconfig.dev.json
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.dll
+C:\Users\HP\source\repos\CabServices\CabService\bin\Debug\netcoreapp3.1\CabService.pdb
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.dll
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.pdb
+C:\Users\HP\source\repos\CabServices\CabService\obj\Debug\netcoreapp3.1\CabService.genruntimeconfig.cache
