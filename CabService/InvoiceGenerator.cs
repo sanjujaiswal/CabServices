@@ -16,11 +16,13 @@ namespace CabService
         /// <summary>
         /// Calculated total fair of ride
         /// </summary>
-        /// <param name="travelDistance"></param>
-        /// <param name="travelTime"></param>
+        /// <param >Travel Distance</param>
+        /// <param >Travel Time</param>
+        /*
         public InvoiceGenerator()
         {
         }
+        */
         public double FareCalculate(double distance, double time)
         {
             double totalFareOfRide = (distance * perKiloMeterCost) + (time * perMinuteCost);
@@ -42,6 +44,27 @@ namespace CabService
                 return minimumFare;
             }
             return totalFare;
+        }
+
+        /// <summary>
+        /// Generating invoice which includes total fare and average fare for multiple rides
+        /// </summary>
+        /// <param name="rides"></param>
+        /// <returns></returns>
+        public InvoiceSummary CalculateCabFare(MultipleRides[] rides)
+        {
+            int totalNumberOfRides = 0;
+            double totalFare = 0;
+            foreach (MultipleRides ride in rides)
+            {
+                totalFare += FareCalculate(ride.distance, ride.time);
+                totalNumberOfRides += 1;
+            }
+            InvoiceSummary invoiceSummary = new InvoiceSummary();
+            invoiceSummary.totalRides = totalNumberOfRides;
+            invoiceSummary.totalFare = totalFare;
+            invoiceSummary.CalulateAverageFare();
+            return invoiceSummary;
         }
     }
 }
