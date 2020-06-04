@@ -9,6 +9,7 @@ namespace CabServicesTest
         public void Setup()
         {
         }
+        //Test1
         [Test]
         public void TakeDistanceAndTimeReturnTotalFare()
         {
@@ -18,6 +19,7 @@ namespace CabServicesTest
             Assert.AreEqual(105, invoiceGen.FareCalculate(travelDistance,travelTime));
         }
 
+        //Test2
         [Test]
         public void GivenMultipleRides_ShouldReturnTotalFare()
         {
@@ -27,6 +29,32 @@ namespace CabServicesTest
                 };
             InvoiceGenerator invoiceGen = new InvoiceGenerator();
             Assert.AreEqual(92.5, invoiceGen.FareCalculate(rides));
+        }
+
+        //Test3
+        [Test]
+        public void GivenDistanceAndTimeOfMultiRidesToInvoiceGeneratorShouldInhancedInvoice()
+        {
+            bool exceptedInvoice = true;
+            bool returnInvoice = false;
+            InvoiceGenerator invoiceGen = new InvoiceGenerator();
+
+            MultipleRides[] rides =
+            {
+                new MultipleRides(5.5,2.5), new MultipleRides(3.0,1.0)
+            };
+            InvoiceSummary returnSummary = invoiceGen.CalculateCabFare(rides);
+            InvoiceSummary expectedSummery = new InvoiceSummary
+            {
+                totalRides = 2,
+                totalFare = 88.5,
+                averageFarePerRide = 44.25
+            };
+            if (returnSummary.totalRides == expectedSummery.totalRides && returnSummary.totalFare == expectedSummery.totalFare && returnSummary.averageFarePerRide == expectedSummery.averageFarePerRide)
+            {
+                returnInvoice = true;
+            }
+            Assert.AreEqual(exceptedInvoice, returnInvoice);
         }
     }
 }
