@@ -93,7 +93,7 @@ C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\Cab
 C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\CabServicesTest.dll
 C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\CabServicesTest.pdb
 C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\CabServicesTest.genruntimeconfig.cache
-C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\CabServicesTest.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\CabServices\CabServicesTest\bin\Debug\netcoreapp3.1\CabService.exe
 C:\Users\HP\source\repos\CabServices\CabServicesTest\bin\Debug\netcoreapp3.1\CabService.dll
 C:\Users\HP\source\repos\CabServices\CabServicesTest\bin\Debug\netcoreapp3.1\CabService.pdb
+C:\Users\HP\source\repos\CabServices\CabServicesTest\obj\Debug\netcoreapp3.1\CabServicesTest.csproj.CoreCompileInputs.cache

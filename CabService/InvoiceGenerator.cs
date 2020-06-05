@@ -6,65 +6,44 @@ namespace CabService
 {
     public class InvoiceGenerator
     {
-        //Variable declaration
-        readonly private double distance;
-        readonly private double time;
-        readonly private double perKiloMeterCost = 10.0;
-        readonly private double perMinuteCost = 1.0;
-        readonly private double minimumFare = 5.0;
-
-        /// <summary>
-        /// Calculated total fair of ride
-        /// </summary>
-        /// <param >Travel Distance</param>
-        /// <param >Travel Time</param>
-        /*
-        public InvoiceGenerator()
+        public double CalculateFare(double distance, int time, string type = "normal")
         {
-        }
-        */
-        public double FareCalculate(double distance, double time)
-        {
-            double totalFareOfRide = (distance * perKiloMeterCost) + (time * perMinuteCost);
-            if (totalFareOfRide < minimumFare)
+            RideType rideType = new RideType(type);
+            double totalFare = distance * rideType.minimumPerKilometerCost + time * rideType.perTimeCost;
+            if (totalFare < rideType.minimumFare)
             {
-                return minimumFare;
-            }
-            return totalFareOfRide;
-        }
-        public double FareCalculate(MultipleRides[] rides)
-        {
-            double totalFare = 0;
-            foreach (MultipleRides storeRide in rides)
-            {
-                totalFare += this.FareCalculate(storeRide.distance, storeRide.time);
-            }
-            if (totalFare < minimumFare)
-            {
-                return minimumFare;
+                return rideType.minimumFare;
             }
             return totalFare;
         }
 
-        /// <summary>
-        /// Generating invoice which includes total fare and average fare for multiple rides
-        /// </summary>
-        /// <param name="rides"></param>
-        /// <returns></returns>
-        public InvoiceSummary CalculateCabFare(MultipleRides[] rides)
+        public InvoiceSummary GetInvoiceSummary(string userId)
         {
-            int totalNumberOfRides = 0;
-            double totalFare = 0;
-            foreach (MultipleRides ride in rides)
+            if (userId is null)
             {
-                totalFare += FareCalculate(ride.distance, ride.time);
-                totalNumberOfRides += 1;
+                throw new ArgumentNullException(nameof(userId));
             }
-            InvoiceSummary invoiceSummary = new InvoiceSummary();
-            invoiceSummary.totalRides = totalNumberOfRides;
-            invoiceSummary.totalFare = totalFare;
-            invoiceSummary.CalulateAverageFare();
-            return invoiceSummary;
+
+            if (UserAccounts.account.ContainsKey(userId))
+            {
+                double totalFare = 0;
+                int numberOfRides = 0;
+                InvoiceSummary invoiceSummary = new InvoiceSummary();
+                foreach (Ride ride in UserAccounts.account[userId])
+                {
+                    totalFare += this.CalculateFare(ride.distance, ride.time, ride.rideType);
+                    numberOfRides++;
+                }
+                invoiceSummary.averageFarePerRide = numberOfRides;
+                invoiceSummary.totalFare = totalFare;
+                invoiceSummary.AverageFareCalculate();
+                return invoiceSummary;
+            }
+            else
+            {
+                throw new InvoiceException(InvoiceException.InvalidServiceException.invalidUserId, "Wrong user Id");
+            }
+
         }
     }
 }

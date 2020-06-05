@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Dynamic;
+using System.Xml.Schema;
 
 namespace CabService
 {
@@ -16,7 +18,7 @@ namespace CabService
         /// <summary>
         /// Calculated average fare per ride
         /// </summary>
-        public void CalulateAverageFare()
+        public void AverageFareCalculate()
         {
             averageFarePerRide = totalFare / totalRides;
         }

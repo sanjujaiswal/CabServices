@@ -1,5 +1,6 @@
 using CabService;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace CabServicesTest
 {
@@ -9,69 +10,25 @@ namespace CabServicesTest
         public void Setup()
         {
         }
-        //Test1
+        //Premium ride 
         [Test]
-        public void TakeDistanceAndTimeReturnTotalFare()
+        public void GivenPremiumRide_ShouldReturnInvoiceSummary()
         {
-            double travelDistance = 10.0;
-            double travelTime = 5;
-            InvoiceGenerator invoiceGen = new InvoiceGenerator();
-            Assert.AreEqual(105, invoiceGen.FareCalculate(travelDistance,travelTime));
-        }
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+            string userId = "Sanju";
+            Ride firstRide = new Ride(3.0, 5, "Premium");
+            Ride secondRide = new Ride(2, 1, "Normal");
 
-        //Test2
-        [Test]
-        public void GivenMultipleRides_ShouldReturnTotalFare()
-        {
-            MultipleRides[] rides =
-                {
-                new MultipleRides(5.0,2.0),new MultipleRides(3.8,2.5)
-                };
-            InvoiceGenerator invoiceGen = new InvoiceGenerator();
-            Assert.AreEqual(92.5, invoiceGen.FareCalculate(rides));
-        }
-
-        //Test3
-        [Test]
-        public void GivenDistanceAndTimeOfMultiRidesToInvoiceGeneratorShouldInhancedInvoice()
-        {
-            bool exceptedInvoice = true;
-            bool returnInvoice = false;
-            InvoiceGenerator invoiceGen = new InvoiceGenerator();
-
-            MultipleRides[] rides =
-            {
-                new MultipleRides(5.5,2.5), new MultipleRides(3.0,1.0)
-            };
-            InvoiceSummary returnSummary = invoiceGen.CalculateCabFare(rides);
-            InvoiceSummary expectedSummery = new InvoiceSummary
+            List<Ride> rides = new List<Ride> { firstRide, secondRide };
+            UserAccounts.AddRides(userId, rides);
+            InvoiceSummary invoiceSummary = invoiceGenerator.GetInvoiceSummary(userId);
+            InvoiceSummary expected = new InvoiceSummary
             {
                 totalRides = 2,
-                totalFare = 88.5,
-                averageFarePerRide = 44.25
+                totalFare = 106,
+                averageFarePerRide = 53
             };
-            if (returnSummary.totalRides == expectedSummery.totalRides && returnSummary.totalFare == expectedSummery.totalFare && returnSummary.averageFarePerRide == expectedSummery.averageFarePerRide)
-            {
-                returnInvoice = true;
-            }
-            Assert.AreEqual(exceptedInvoice, returnInvoice);
-        }
-
-        [Test]
-        public void GivenDistanceAndTimeOfMultiRidesToUserIdShouldTotalFare()
-        {
-            string userId = "sanju@357";
-            InvoiceGenerator invoiceGen = new InvoiceGenerator();
-            MultipleRides[] rides =
-            {
-                new MultipleRides(3.0,1.0),
-                new MultipleRides(3.5,1.5)
-            };
-            RideRepository rideRepository = new RideRepository();
-            rideRepository.AddInRide(userId, rides);
-            InvoiceSummary retunTotal = invoiceGen.CalculateCabFare(rideRepository.GetRides(userId));
-            Assert.AreEqual(67.5, retunTotal.totalFare);
-
+            Assert.AreEqual(expected.totalFare, invoiceSummary.totalFare);
         }
     }
     }
