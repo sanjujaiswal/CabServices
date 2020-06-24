@@ -73,5 +73,24 @@ namespace CabServicesTest
             Assert.AreEqual(67.5, retunTotal.totalFare);
 
         }
+
+        [Test]
+        public void GivenDistanceAndTimeForMultiRidesToUserId_ShouldReturnTotalFare()
+        {
+            string userId = "manoj12345";
+            InvoiceGenerator invoiceGen = new InvoiceGenerator();
+            MultipleRides[] rides =
+            {
+                new MultipleRides(3.0,1.0),
+                new MultipleRides(3.5,1.5),
+                new MultipleRides(8.0,3.5)
+
+            };
+            RideRepository rideRepository = new RideRepository();
+            rideRepository.AddInRide(userId, rides);
+            InvoiceSummary retunTotal = invoiceGen.CalculateCabFare(rideRepository.GetRides(userId));
+            Assert.AreEqual(151, retunTotal.totalFare);
+
+        }
     }
     }
