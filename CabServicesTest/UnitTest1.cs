@@ -9,7 +9,10 @@ namespace CabServicesTest
         public void Setup()
         {
         }
-        //Test1
+        /// <summary>
+        /// Given distance and time
+        /// Should return invoiceGen
+        /// </summary>
         [Test]
         public void TakeDistanceAndTimeReturnTotalFare()
         {
@@ -19,7 +22,10 @@ namespace CabServicesTest
             Assert.AreEqual(105, invoiceGen.FareCalculate(travelDistance,travelTime));
         }
 
-        //Test2
+        /// <summary>
+        /// Given distance and time for normal and multiple rides
+        /// Should return invoiceGen like total fare and average fare.
+        /// </summary>
         [Test]
         public void GivenMultipleRides_ShouldReturnTotalFare()
         {
@@ -31,7 +37,10 @@ namespace CabServicesTest
             Assert.AreEqual(92.5, invoiceGen.FareCalculate(rides));
         }
 
-        //Test3
+        /// <summary>
+        /// Given distance and time for multiple rides 
+        /// should return average and togtal rides and  number of rides.
+        /// </summary>
         [Test]
         public void GivenDistanceAndTimeOfMultiRidesToInvoiceGeneratorShouldInhancedInvoice()
         {
@@ -57,6 +66,10 @@ namespace CabServicesTest
             Assert.AreEqual(exceptedInvoice, returnInvoice);
         }
 
+        /// <summary>
+        /// Given distance, time and user id for multiple rides 
+        /// should return average and togtal rides and  number of rides.
+        /// </summary>
         [Test]
         public void GivenDistanceAndTimeOfMultiRidesToUserIdShouldTotalFare()
         {
@@ -74,6 +87,10 @@ namespace CabServicesTest
 
         }
 
+        /// <summary>
+        /// Given distance, time and userId for multiple rides eg. three rides
+        /// should return invoice summary like-- average and togtal rides and  number of rides.
+        /// </summary>
         [Test]
         public void GivenDistanceAndTimeForMultiRidesToUserId_ShouldReturnTotalFare()
         {
